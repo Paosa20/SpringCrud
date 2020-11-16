@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Antologies</title>
+</head>
+<body>
+Modificar:
+<form action="#" th:action="@{/modificar/{id}(id=${id})}" th:object="${antology}" method="post">
+
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" >
+    <br>
+
+    <label for="descripcion">Descripcion</label>
+    <input type="text" th:field="*{descripcion}" id="descripcion">
+    <br>
+    <label for="fecha">Fecha</label>
+    <input type="date" th:field="*{fecha}" id="fecha">
+
+    <input type="submit" value="Update Anthology">
+</form>
+
+</body>
+</html>

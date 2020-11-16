@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar articulos</title>
+</head>
+<body>
+Insertar articulo para la Antologia #: <span th:text="${antology.id}">Id</span>
+<form action="#" th:action="@{/agregar-articulos/{id}(id=${antology.id})}" th:object="${article}" method="post">
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name">
+    <input type="submit" value="Add Article">
+</form>
+</body>
+</html>
